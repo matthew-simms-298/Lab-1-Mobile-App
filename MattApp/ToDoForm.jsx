@@ -1,6 +1,6 @@
 import React from "react";
 
-function App() {
+function ToDoForm() {
     return (
         <View style={styles.form}>
         <TextInput

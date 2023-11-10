@@ -6,7 +6,6 @@
  */
 
 import React, { useState } from 'react';
-import type {PropsWithChildren} from 'react';
 import ToDoForm from './ToDoForm';
 import ToDoList from './ToDoList';
 
@@ -30,9 +29,16 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+const [tasks, setTasks] = useState(
+    setTasks = [
+      'Do laundry',
+      'Go to gym',
+      'Walk dog'
+    ]
+  );
 
 
-function App(): JSX.Element {
+function App() {
   
   let condition = false;
 
@@ -40,7 +46,7 @@ function App(): JSX.Element {
 
   return (
     <SafeAreaView>
-      <ToDoList/>
+      <ToDoList tasks ={tasks}/>
       <ToDoForm/>
     </SafeAreaView>
   );
